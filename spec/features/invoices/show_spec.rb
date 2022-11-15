@@ -120,7 +120,6 @@ RSpec.describe 'Invoice Show Page', type: :feature do
     end
 
     it 'should not have a link' do
-      # require 'pry'; binding.pry
       visit merchant_invoice_path(nomi, invoice_9)
       within("#items_on_this_invoice") do
         

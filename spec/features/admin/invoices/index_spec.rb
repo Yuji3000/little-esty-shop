@@ -45,7 +45,6 @@ require 'rails_helper'
     end
 
     it "has a header" do 
-      # save_and_open_page
       expect(page).to have_content("Thanksgiving Day 2022-11-24")
       expect(page).to have_content("Christmas Day 2022-12-26")
       expect(page).to have_content("New Year's Day 2023-01-02")
