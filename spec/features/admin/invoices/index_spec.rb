@@ -45,9 +45,11 @@ require 'rails_helper'
     end
 
     it "has a header" do 
-      expect(page).to have_content("Admin Invoices Index")
+      expect(page).to have_content("Thanksgiving Day 2022-11-24")
+      expect(page).to have_content("Christmas Day 2022-12-26")
+      expect(page).to have_content("New Year's Day 2023-01-02")
     end
-
+    
     it "has invoice ID links" do 
       expect(page).to have_link(@invoice_1.id.to_s)
       expect(page).to have_link(@invoice_2.id.to_s)
