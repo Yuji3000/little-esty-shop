@@ -1,9 +1,7 @@
 class ApplicationController < ActionController::Base
-  # before_action :github_info
+  before_action :nader_info
 
-  # def github_info
-  #   @repo = GithubSearch.repo_name
-  #   @commits = GithubSearch.commits
-  #   @pulls = GithubSearch.pulls
-  # end
+  def nader_info
+    @holidays = HolidaySearch.new.holiday_information
+  end
 end
