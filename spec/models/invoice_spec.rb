@@ -189,5 +189,11 @@ RSpec.describe Invoice, type: :model do
         expect(invoice_3.discount_format).to eq(3.00)
       end
     end
+
+    describe '#discount_revenue' do
+      it 'returns the revenue after discounted' do
+        expect(invoice_3.discounted_revenue(nomi)).to eq(27.00)
+      end
+    end
   end
 end

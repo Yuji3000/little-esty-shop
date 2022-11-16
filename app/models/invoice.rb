@@ -51,4 +51,8 @@ class Invoice < ApplicationRecord
   def discount_format
     ((self.total_discount.to_f / 100).round(2))
   end
+
+  def discounted_revenue(merchant)
+    ((my_total_revenue(merchant)) - (total_discount)) / 100
+  end
 end
